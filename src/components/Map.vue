@@ -25,7 +25,7 @@ export default {
             var el = document.createElement('div');
             el.className = 'marker';
 
-            new mapboxgl.Marker(el)
+            new window.mapboxgl.Marker(el)
                 .setLngLat([parseFloat(marker.latitude), parseFloat(marker.longitude)])
                 .addTo(map);
         });
