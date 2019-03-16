@@ -1,6 +1,6 @@
 <template>
   <div class="badge" :id="name">
-    <img class="badge-img" :src="image" height="120px" />
+    <img class="badge-img" :src="image" />
     <h3>{{ name }}</h3>
   </div>
 </template>
@@ -17,12 +17,24 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
 .badge {
     display: flex;
     flex-direction: column;
     text-align: center;
     color: #212121;
 }
+
+.badge > img {
+  height: 120px;
+}
+
+@media only screen and (max-width: 800px) {
+  .badge > img {
+    height: 60px;
+  }
+}
+
 
 .badge-img{
     border-radius: 50%;
