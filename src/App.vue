@@ -28,7 +28,7 @@ export default {
     Map
   },
   mounted(){
-    fetch('https://wordpress-vue.herokuapp.com/wordpress/wp-json/markers/v1/post')
+    fetch('https://wordpress-vue.herokuapp.com/index.php/wp-json/markers/v1/post')
       .then((r) => r.json())
       .then((res) => this.markers = res.map(x => x.acf));
   }
